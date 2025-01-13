@@ -15,21 +15,6 @@ def run():
     """
     Run the crew.
     """
-    inputs = {
-        "company_info": {
-            "name": "COMPANY_NAME",
-            "product_name": "PRODUCT_NAME",
-            "website": "WEBSITE_URL",
-            "sales_rep_name": "SALES_REP_NAME",
-            "sales_rep_contact": "SALES_REP_EMAIL",
-        },
-        "lead_info": {
-            "name": "LEAD_NAME",
-            "company": "COMPANY_NAME",
-            "industry": "INDUSTRY_NAME",
-        },
-    }
-
     result = SalesPdfCrew().crew().kickoff(inputs=inputs)
 
     pdf = MarkdownPdf(toc_level=1)
